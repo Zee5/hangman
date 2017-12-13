@@ -1,20 +1,15 @@
 body {
   background-color: rgb(204, 209, 202);
-  /* border: 1px solid silver; */
     width: 80%; 
     margin-left:auto; 
     margin-right: auto; 
-    /* min-height:100%; */
 }
-
 h1 {
-
   font-family: 'Pacifico', cursive;
   text-align: center;
   font-size: 70px;
   margin-top: 5px;
 }
-
 .description {
   font-family: 'Pacifico', cursive;
   font-size: 25px;
@@ -39,50 +34,34 @@ footer {
   padding-right: 100px;
   font-size: 30px;
   letter-spacing: 2px;
-/*  margin-left: 290px;
-  margin-right: 290px;*/
 }
 #game {
   display: flex;
-  /* flex-wrap: wrap; */
   padding-top: 20px;
   padding-left: 50px;
-  /* width: 1350px; */
   height: 100vh;
-  /* height: 500px; */
-  
-  
 }
 #beginGame {
   text-align: center;
   padding-top: 25px;
   padding-left: 222px;
 }
-/*#restartGame {
-  text-align: center;
-  padding-top: 10px;
-  padding-left: 222px;
-}
-*/
 #execution {
   height: 275px;
   width: 250px;
 }
-
 #hiddenWordContainer {
   font-family: 'Pacifico', cursive;
   text-align: center;
   width: 650px;
   height: 100px;
 }
-
 #hidden {
   text-align: center;
   font-size: 45px;
   padding-left: 195px;
   margin: 0px;
 }
-
 #alphabet {
   height: 140px;
   width: 600px;
@@ -103,22 +82,17 @@ footer {
     cursor: pointer;
     border: 0.5px solid black;
 }
-
 .letter {
   padding-top: 2px;
 }
-
 #wordsAndButtons {
   width: 600px;
   height: 275px;
   margin-right: 150px;
 }
-
 #incorrectTryBox {
   font-family: 'Pacifico', cursive;
   width: 250px;
-   /*height: 100px;
-  margin-top: -200px;*/ 
   font-size: 20px;
   text-align: left;
 }
@@ -154,7 +128,6 @@ footer {
   margin-top: 0px;
   background-color: rgb(5, 5, 5);
 }
-
 #hangmanHead {
   height: 40px;
   width: 40px;
@@ -162,14 +135,12 @@ footer {
   margin-left: 163px;
   background-color: rgb(95, 93, 93);
 }
-
 #hangmanBody {
   height: 70px;
   width: 23px;
   margin-left: 171px;
   background-color: green;
 }
-
 #hangmanLeftArm {
   height: 45px;
   width: 10px;
@@ -178,7 +149,6 @@ footer {
   transform: rotate(-120deg);
   background-color: green;
 }
-
 #hangmanRightArm {
   height: 45px;
   width: 10px;
@@ -187,7 +157,6 @@ footer {
   transform: rotate(120deg);
   background-color: green;
 }
-
 #hangmanLeftLeg {
   height: 55px;
   width: 10px;
