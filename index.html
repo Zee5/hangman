@@ -1,15 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Hungman</title>
+   <title>Hangman Game</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src='js/script.js'></script>
 </head>
 <body>
-<p>hello hungman</p>
-    
+<h1>Hangman</h1>
+   <section id='information'>
+      <h2 class='description'>How to play:</h2>
+         <p id='hangmanInformation'>
+      Guess <span>Javascript</span> words by selecting letters provided below.
+         </p>  
+   </section>
+<section id='game'>
+   <div id='execution'>
+      <div id='executionBase'></div> 
+      <div id='executionPole'></div>
+      <div id='executionTop'></div>
+      <div id='executionRope'></div>
+      <div id='hangmanHead'></div>
+      <div id='hangmanBody'></div>
+      <div id='hangmanLeftArm'></div>
+      <div id='hangmanRightArm'></div>
+      <div id='hangmanLeftLeg'></div>
+      <div id='hangmanRightLeg'></div>
+   </div>
+<div id='wordsAndButtons'>
+   <div id='hiddenWordContainer'>
+      <p class='hiddenClass' id='hidden'></p>
+   </div>
+<br>
+   <div id='alphabet'>
+      <button class='letter btn' id='A'>A</button>
+      <button class='letter btn' id='B'>B</button>
+      <button class='letter btn' id='C'>C</button>
+      <button class='letter btn' id='D'>D</button>
+      <button class='letter btn' id='E'>E</button>
+      <button class='letter btn' id='F'>F</button>
+      <button class='letter btn' id='G'>G</button>
+      <button class='letter btn' id='H'>H</button>
+      <button class='letter btn' id='I'>I</button>
+      <br>
+      <button class='letter btn' id='J'>J</button>
+      <button class='letter btn' id='K'>K</button>
+      <button class='letter btn' id='L'>L</button>
+      <button class='letter btn' id='M'>M</button>
+      <button class='letter btn' id='N'>N</button>
+      <button class='letter btn' id='O'>O</button>
+      <button class='letter btn' id='P'>P</button>
+      <button class='letter btn' id='Q'>Q</button>
+      <button class='letter btn' id='R'>R</button>
+      <br>
+      <button class='letter btn' id='S'>S</button>
+      <button class='letter btn' id='T'>T</button>
+      <button class='letter btn' id='U'>U</button>
+      <button class='letter btn' id='V'>V</button>
+      <button class='letter btn' id='W'>W</button>
+      <button class='letter btn' id='X'>X</button>
+      <button class='letter btn' id='Y'>Y</button>
+      <button class='letter btn' id='Z'>Z</button>
+   </div>
+   <div id='beginGame'>
+   <button class="btn newGameClassButton">Start New Game</button>
+   </div>
+</div>
+   <div id='incorrectTryBox'>
+      Lives Left: <span class='livesLeftNumberClass' id='livesLeftNumber'></span>
+   </div>
+
+
+</section>
+
+<footer id='footer'></footer>
+
 </body>
 </html>
