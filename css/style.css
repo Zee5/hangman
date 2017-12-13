@@ -203,9 +203,9 @@ footer {
   margin-left: 193px;
   margin-top: -55px;
   transform: rotate(-20deg);
-  background-color: blue;
+  background-color: rgb(6, 6, 248);
 }
 span{
-  color: blue;
+  color: rgb(11, 11, 241);
   text-decoration: underline;
 }
