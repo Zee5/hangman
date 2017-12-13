@@ -14,10 +14,19 @@ $(document).ready(function() {
   
    // when clicking the start button, run this function
   function startGameClick() {
-    var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];  // randomly picks a word from the array
+    var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];  // random word selection from the array
     for (var i = 0; i < chosenWord.length; i++) {
-      myWord.push(chosenWord[i]);    // puts in _ for the length of the word
+      myWord.push(chosenWord[i]);    // pushing underscore
       blankSpaces.push('_ ');
+    }
+    $('#hidden').append((blankSpaces));      // puts all the _'s in the dom in the div with the 'hidden' id
+    $('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked
+    showHangedMan(lives);   
+    // alert(chosenWord);   
+  }; 
+
+
+
 
       
 
