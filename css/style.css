@@ -50,6 +50,8 @@ footer {
   /* width: 1350px; */
   height: 100vh;
   /* height: 500px; */
+  
+  
 }
 #beginGame {
   text-align: center;
@@ -109,16 +111,16 @@ footer {
 #wordsAndButtons {
   width: 600px;
   height: 275px;
-  margin-right: 250px;
+  margin-right: 150px;
 }
 
 #incorrectTryBox {
   font-family: 'Pacifico', cursive;
-  /* width: 250px;
-  height: 100px;
+  width: 250px;
+   /*height: 100px;
   margin-top: -200px;*/ 
   font-size: 20px;
-  text-align: right;
+  text-align: left;
 }
 /* hangmans body parts aand  the execution pole*/
 #executionPole {
