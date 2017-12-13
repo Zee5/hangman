@@ -20,7 +20,7 @@ $(document).ready(function() {
       blankSpaces.push('_ '); // pushing underscore
     }
     $('#hidden').append((blankSpaces));      // puts all the _'s in the dom in the div with the 'hidden' id
-    $('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked
+    $('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked 
     showHangedMan(lives);    
   }; 
   function letterClick() {
