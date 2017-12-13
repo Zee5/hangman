@@ -16,18 +16,68 @@ $(document).ready(function() {
   function startGameClick() {
     var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];  // random word selection from the array
     for (var i = 0; i < chosenWord.length; i++) {
-      myWord.push(chosenWord[i]);    // pushing underscore
-      blankSpaces.push('_ ');
+      myWord.push(chosenWord[i]);    
+      blankSpaces.push('_ '); // pushing underscore
     }
     $('#hidden').append((blankSpaces));      // puts all the _'s in the dom in the div with the 'hidden' id
     $('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked
-    showHangedMan(lives);   
-    
+    showHangedMan(lives);    
   }; 
-
-
-
-
-      
+  function letterClick() {
+    $(this).hide();           // Hides the button after its pressed.
+    var pressedLetter = this.innerHTML;    // assings button pressed to var pressedLetter
+    for (var i = 0; i < myWord.length; i++) {   
+      if (pressedLetter === myWord[i]) {   
+        blankSpaces[i] = pressedLetter;   
+      }
+    }
+      $('.hiddenClass').text(blankSpaces.join(' ')); // connects the letters in the array writes it into the answer area
+      if (blankSpaces.indexOf('_ ') === -1) {   
+        $('#incorrectTryBox').text('You Win!'); // 
+        setTimeout(location.reload.bind(location), 6000);    // after you win refreshes the page after 6 seconds to start over
+        }
+      if (!(myWord.indexOf(pressedLetter) > -1)) {
+        lives -= 1;
+        showHangedMan(lives);         // everytime lives counts down goes through the switch/case
+        $('#livesLeftNumber').text(lives);
+       
+        } 
+      if (lives < 1) {
+        $('#incorrectTryBox').text('YOU LOSE!');
+        $('.hiddenClass').text(myWord.join(' '));   // added in to show the word when you lose
+        setTimeout(location.reload.bind(location), 6000); // after you lose refreshes the page after 5 seconds to start over
+      }
+  };
+  var showHangedMan = function(anyParam) {  
+    switch (anyParam) {
+      case 6:
+          $('#hangmanHead').hide();
+          $('#hangmanBody').hide();
+          $('#hangmanLeftArm').hide();
+          $('#hangmanRightArm').hide();
+          $('#hangmanLeftLeg').hide();
+          $('#hangmanRightLeg').hide();
+            break;
+      case 5: $('#hangmanHead').show();       
+            break;
+      case 4:
+          $('#hangmanBody').show();
+            break;
+      case 3:
+          $('#hangmanLeftArm').show();
+            break;
+      case 2:
+          $('#hangmanRightArm').show();
+            break;
+      case 1:
+          $('#hangmanLeftLeg').show();
+            break;      
+      case 0:
+          $('#hangmanRightLeg').show();
+            break;
+      default:
+            break;
+    }
+  }
 
 }); 
