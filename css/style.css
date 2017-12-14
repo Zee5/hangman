@@ -11,18 +11,25 @@ h1 {
   text-align: center;
   font-size: 70px;
   margin-top: 5px;
-  
-  text-shadow: 0 1px 0 white;
-  color: #292929;
+
+ 
+
+  text-shadow: 0 0 4px #ccc, 
+  0 -5px 4px #ff3, 
+  2px -10px 6px #fd3, 
+  -2px -15px 11px #f80, 
+  2px -38px 88px #f20;
   
 
 }
 .description {
-  font-family: 'Pacifico', cursive;
   font-family: 'Slabo 37px', serif;
   font-size: 25px;
   text-align: center;
   margin-top: -10px;
+
+  text-shadow: 4px 1px 0 rgb(223, 220, 220);
+  color: #424141;
 }
 button {
   font-size: 8px;
@@ -35,13 +42,15 @@ footer {
   font-family: 'Pacifico', cursive;
 }
 #hangmanInformation {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Slabo 37px', serif;
   text-align: center;
   text-overflow: ellipsis;
   padding-left: 100px;
   padding-right: 100px;
   font-size: 30px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  text-shadow: 4px 1px 0 rgb(223, 220, 220);
+  color: #424141;
 }
 #game {
   display: flex;
@@ -60,6 +69,7 @@ footer {
 }
 #hiddenWordContainer {
   font-family: 'Pacifico', cursive;
+  font-family: 'Slabo 27px', serif;
   text-align: center;
   width: 650px;
   height: 100px;
@@ -72,10 +82,17 @@ footer {
 }
 #alphabet {
   height: 140px;
-  width: 600px;
+  width: 400px;
   margin: 10px;
   padding-left: 70px;
   text-align: center;
+
+  -webkit-box-shadow: 0 0 40px #333 inset;
+  -moz-box-shadow: 0 0 20px #333 inset;
+  box-shadow: 0 0 20px #333 inset;
+
+  
+
 }
 .btn{
   background-color: rgb(7, 7, 7);
@@ -99,11 +116,12 @@ footer {
   margin-right: 150px;
 }
 #incorrectTryBox {
-  font-family: 'Pacifico', cursive;
-  width: 250px;
+  font-family: 'Slabo 37px', serif;
+  width: 100px;
   font-size: 20px;
   text-align: left;
 }
+
 /* hangmans body parts aand  the execution pole*/
 #executionPole {
   height: 250px;
@@ -183,8 +201,9 @@ footer {
   background-color: rgb(6, 6, 248);
 }
 span{
-  color: rgb(11, 11, 241);
+  color: rgb(65, 65, 189);
   text-decoration: underline;
+  font-style: italic;
 }
 @media screen and (min-width: 480px) {
   body {
