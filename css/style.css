@@ -20,11 +20,12 @@ h1 {
 }
 .description {
   font-family: 'Slabo 37px', serif;
-  font-size: 25px;
+  font-size: 35px;
   text-align: center;
   margin-top: -10px;
+  letter-spacing: 2px;
 
-  text-shadow: 4px 1px 0 rgb(223, 220, 220);
+  text-shadow: 3px 2px 0 rgb(255, 255, 255);
   color: #424141;
 }
 button {
@@ -45,7 +46,7 @@ footer {
   padding-right: 100px;
   font-size: 30px;
   letter-spacing: 1px;
-  text-shadow: 4px 1px 0 rgb(223, 220, 220);
+  text-shadow: 4px 1px 0 rgb(247, 244, 244);
   color: #424141;
 }
 #game {
@@ -79,14 +80,19 @@ footer {
 #alphabet {
   height: 140px;
   width: 400px;
-  margin: 10px;
+  margin: 10px px 50px;
   padding-left: 70px;
   text-align: center;
 
-  -webkit-box-shadow: 0 0 40px #333 inset;
+  -webkit-box-shadow: 10px 0 40px #333 inset;
   -moz-box-shadow: 0 0 20px #333 inset;
   box-shadow: 0 0 20px #333 inset;
-
+  padding-left: 40px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border: 1px rgb(65, 64, 64) solid;
+  border-radius: 5px;
   
 
 }
@@ -107,15 +113,17 @@ footer {
   padding-top: 2px;
 }
 #wordsAndButtons {
-  width: 600px;
+  width: 500px;
   height: 275px;
   margin-right: 150px;
+  padding: 100px;
 }
 #incorrectTryBox {
   font-family: 'Slabo 37px', serif;
   width: 100px;
   font-size: 20px;
   text-align: left;
+  margin-left: -200px;
 }
 /* hangmans body parts aand  the execution pole*/
 #executionPole {
@@ -200,8 +208,13 @@ span{
   text-decoration: underline;
   font-style: italic;
 }
+.newGameClassButton{
+margin-left: -200px;
+border-radius: 5px;
+border: 0.5px solid rgb(54, 53, 53);
+}
 @media screen and (min-width: 480px) {
   body {
-      background-color: rgb(190, 187, 188);
+      background-color: rgb(214, 213, 214);
   }
 }
