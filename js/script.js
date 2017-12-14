@@ -12,9 +12,10 @@ $(document).ready(function() {
   $('#beginGame').on('click', startGameClick) 
   $('.letter').on('click', letterClick)
   
-   // when clicking the start button, run this function
+   // The function runs when clicking the start button
   function startGameClick() {
-    var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];  // random word selection from the array
+    // random word selection from the array
+    var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];  
     for (var i = 0; i < chosenWord.length; i++) {
       myWord.push(chosenWord[i]);    
       blankSpaces.push('_ '); // pushing underscore
@@ -23,18 +24,21 @@ $(document).ready(function() {
     $('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked 
     showHangedMan(lives);    
   }; 
+  // when any letter clicked form the screen, then letterClick function runs
   function letterClick() {
-    $(this).hide();           // Hides the button after its pressed.
+    $(this).hide();           
     var pressedLetter = this.innerHTML;    // assings button pressed to var pressedLetter
     for (var i = 0; i < myWord.length; i++) {   
       if (pressedLetter === myWord[i]) {   
         blankSpaces[i] = pressedLetter;   
       }
     }
-      $('.hiddenClass').text(blankSpaces.join(' ')); // connects the letters in the array writes it into the answer area
+    // Grab letters from the array writes it into the answer area
+      $('.hiddenClass').text(blankSpaces.join(' ')); 
       if (blankSpaces.indexOf('_ ') === -1) {   
         $('#incorrectTryBox').text('You Win!'); // 
-        setTimeout(location.reload.bind(location), 6000);    // after you win refreshes the page after 6 seconds to start over
+        setTimeout(location.reload.bind(location), 6000); 
+        // after you win refreshes the page after 6 seconds to start over 
         }
       if (!(myWord.indexOf(pressedLetter) > -1)) {
         lives -= 1;
@@ -45,9 +49,11 @@ $(document).ready(function() {
       if (lives < 1) {
         $('#incorrectTryBox').text('YOU LOSE!');
         $('.hiddenClass').text(myWord.join(' '));   // added in to show the word when you lose
-        setTimeout(location.reload.bind(location), 6000); // after you lose refreshes the page after 5 seconds to start over
+        setTimeout(location.reload.bind(location), 6000); 
+        // after you lose refreshes the page after 5 seconds to start over
       }
   };
+  // everytime lives counts down goes through the switch/case
   var showHangedMan = function(anyParam) {  
     switch (anyParam) {
       case 6:
