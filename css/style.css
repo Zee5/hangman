@@ -1,5 +1,4 @@
 
-
 body {
   background-color: rgb(204, 209, 202);
     width: 80%; 
@@ -8,12 +7,19 @@ body {
 }
 h1 {
   font-family: 'Pacifico', cursive;
+  font-family: 'Slabo 47px', serif;
   text-align: center;
   font-size: 70px;
   margin-top: 5px;
+  
+  text-shadow: 0 1px 0 white;
+  color: #292929;
+  
+
 }
 .description {
   font-family: 'Pacifico', cursive;
+  font-family: 'Slabo 37px', serif;
   font-size: 25px;
   text-align: center;
   margin-top: -10px;
@@ -182,6 +188,6 @@ span{
 }
 @media screen and (min-width: 480px) {
   body {
-      background-color: rgb(148, 143, 144);
+      background-color: rgb(190, 187, 188);
   }
 }
