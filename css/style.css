@@ -12,15 +12,11 @@ h1 {
   font-size: 70px;
   margin-top: 5px;
 
- 
-
   text-shadow: 0 0 4px #ccc, 
   0 -5px 4px #ff3, 
   2px -10px 6px #fd3, 
   -2px -15px 11px #f80, 
   2px -38px 88px #f20;
-  
-
 }
 .description {
   font-family: 'Slabo 37px', serif;
@@ -121,7 +117,6 @@ footer {
   font-size: 20px;
   text-align: left;
 }
-
 /* hangmans body parts aand  the execution pole*/
 #executionPole {
   height: 250px;
